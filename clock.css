@@ -1,0 +1,74 @@
+/* Onload clock animations */
+@keyframes openClockAnimation {
+	0% {
+		max-width: 0rem;
+	}
+	100% {
+		max-width: 23rem;
+	}
+}
+
+@keyframes timeFadeIn {
+	0% {
+		opacity: 0;
+		font-size: 0rem;
+	}
+	50% {
+		opacity: 0;
+		font-size: 0rem;
+	}
+	100% {
+		opacity: 1;
+		font-size: 3rem;
+	}
+}
+
+html {
+	background-color: white;    
+	transition: background-color .3s linear;
+	-moz-transition: background-color .3s linear;
+	-webkit-transition: background-color .3s linear;
+	-o-transition: background-color .3s linear;
+}
+
+.my-clock {
+	font-family: 'Rubik', sans-serif;
+	display: flex;
+	animation: 1.5s openClockAnimation;
+	-moz-animation: 1.5s openClockAnimation;
+	-webkit-animation: 1.5s openClockAnimation;
+	-o-animation: 1.5s openClockAnimation;
+	max-width: 23rem;
+	overflow: hidden;
+	color: #4badda;
+	background-color: white;
+	border-left: 8px solid #4badda;
+    border-right: 8px solid #4badda;
+	font-size: 3rem;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 5rem;
+	border-radius: .7rem;
+	-webkit-box-shadow: 0px 0px 13px 0px rgba(204,204,204,0.45);
+-moz-box-shadow: 0px 0px 13px 0px rgba(204,204,204,0.45);
+box-shadow: 0px 0px 13px 0px rgba(204,204,204,0.45);
+}
+
+.my-clock > * {
+	flex: 1;
+	padding: 1rem;
+}
+
+#clock-numbers {
+	animation: 1.5s timeFadeIn ease-out;
+	-moz-animation: 1.5s timeFadeIn ease-out;
+	-webkit-animation: 1.5s timeFadeIn ease-out;
+	-o-animation: 1.5s timeFadeIn ease-out;
+}
+
+@media screen and (max-width:450px) {
+	body {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
